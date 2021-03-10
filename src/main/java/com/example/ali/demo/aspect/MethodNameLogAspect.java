@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class MethodNameLogAspect {
 
-	@Around("@annotation(com.example.ali.demo.annotation.MethodNameLog)")
-	public Object methodNameLog(ProceedingJoinPoint pjp) throws Throwable {
-		System.err.println(pjp.getSignature().getName() + " is run..");
-		return pjp.proceed();
-	}
+    @Around("@annotation(com.example.ali.demo.annotation.MethodNameLog)")
+    public Object methodNameLog(ProceedingJoinPoint pjp) throws Throwable {
+        System.err.println(pjp.getSignature().getName() + " method is running..");
+        return pjp.proceed();
+    }
 
 }
